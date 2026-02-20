@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PR Rodrigues Film</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(180deg,#050505,#0f0f14);
+color:#ffffff;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:15px;
+}
+
+.logo img{
+width:120px;
+}
+
+h1{
+text-align:center;
+margin:5px 0;
+}
+
+.subtitle{
+text-align:center;
+color:#b8b8c5;
+margin-bottom:15px;
+}
+
+.frase{
+border-left:4px solid #c00000;
+padding:12px;
+background:#111;
+margin-bottom:20px;
+font-weight:bold;
+text-align:center;
+}
+
+.card{
+background:#141420;
+padding:15px;
+border-radius:15px;
+margin-bottom:15px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.button{
+display:block;
+text-decoration:none;
+color:white;
+padding:14px;
+margin:8px 0;
+border-radius:12px;
+border:1px solid #c00000;
+background:#111;
+text-align:center;
+font-weight:bold;
+transition:0.3s;
+}
+
+.button:hover{
+background:#c00000;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:5px 0 10px 0;
+border-radius:10px;
+border:1px solid #333;
+background:#0f0f14;
+color:white;
+}
+
+.footer{
+text-align:center;
+color:#777;
+font-size:12px;
+margin-top:20px;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:15px;
+right:15px;
+background:#111;
+border:1px solid #c00000;
+padding:10px 15px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.whatsapp-float:hover{
+background:#c00000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="logo-pr.png" alt="PR Rodrigues Film">
+</div>
+
+<h1>PR RODRIGUES FILM</h1>
+<div class="subtitle">
+Películas Premium • Controle Solar • PPF<br>
+Gravataí / RS
+</div>
+
+<div class="frase">
+Protegendo com estilo, refletindo com confiança.
+</div>
+
+<div class="card">
+<a class="button" href="https://wa.me/5551991205802?text=Olá! Quero orçamento AUTOMOTIVO." target="_blank">
+ORÇAMENTO AUTOMOTIVO
+</a>
+
+<a class="button" href="https://wa.me/5551991205802?text=Olá! Quero orçamento RESIDENCIAL ou COMERCIAL." target="_blank">
+RESIDENCIAL / COMERCIAL
+</a>
+
+<a class="button" href="https://wa.me/5551991205802?text=Olá! Quero orçamento PPF." target="_blank">
+PPF – PROTEÇÃO DE PINTURA
+</a>
+
+<a class="button" href="https://www.google.com/maps/place/PR+RODRIGUES+FILM" target="_blank">
+COMO CHEGAR (GOOGLE MAPS)
+</a>
+</div>
+
+<div class="card">
+<h3>Simular Orçamento</h3>
+
+<select id="servico">
+<option>Película Automotiva</option>
+<option>Residencial/Comercial</option>
+<option>PPF</option>
+</select>
+
+<input type="text" id="modelo" placeholder="Modelo do carro ou ambiente">
+
+<textarea id="detalhes" placeholder="Detalhes adicionais..."></textarea>
+
+<a class="button" href="#" onclick="enviarWhats()">
+ENVIAR PARA WHATSAPP
+</a>
+</div>
+
+<div class="footer">
+© PR Rodrigues Film • Gravataí/RS
+</div>
+
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/5551991205802?text=Olá! Vim pelo Instagram." target="_blank">
+WhatsApp
+</a>
+
+<script>
+function enviarWhats(){
+var servico = document.getElementById("servico").value;
+var modelo = document.getElementById("modelo").value;
+var detalhes = document.getElementById("detalhes").value;
+
+var mensagem = "Olá! Vim pelo Instagram e quero orçamento.\n"
++ "Serviço: " + servico + "\n"
++ "Modelo/Ambiente: " + modelo + "\n"
++ "Detalhes: " + detalhes;
+
+var url = "https://wa.me/5551991205802?text=" + encodeURIComponent(mensagem);
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
